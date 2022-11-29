@@ -9,18 +9,16 @@ var rolls = 1;
 if (argv[0] != "") {
 	var cleaned = argv[0].match(/\d/g);
 	cleaned = cleaned.join("");
-	if (cleaned > 3) {
-	side = cleaned;
-	}
+	side = parseInt(cleaned);
 }
 if (argv[1] != "") {
 	var cleanedTwo = argv[1].match(/\d/g);
 	cleanedTwo = cleanedTwo.join("");
-	die = cleanedTwo;
+	die = parseInt(cleanedTwo);
 }
 if (argv[2] != "") {
 	var cleanedThree = argv[2].match(/\d/g);
 	cleanedThree = cleanedThree.join("");
-	rolls = cleanedThree;
+	rolls = parseInt(cleanedThree);
 }
 console.log(JSON.stringify(roll(side, die, rolls)));
